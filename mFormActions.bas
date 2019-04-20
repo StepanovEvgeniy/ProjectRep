@@ -21,11 +21,11 @@ If fConst.TextBox1.Value <> "" And fConst.TextBox2.Value <> "" Then
     
     fWrite = mText.SaveTXTfile(ThisWorkbook.Path + "\tConst.txt", cTxt)
 Else
-    msgCrash = MsgBox("Запись не произведена.Введите данные!", vbOKOnly, "Настройка констант")
+    msgCrash = MsgBox("Р—Р°РїРёСЃСЊ РЅРµ РїСЂРѕРёР·РІРµРґРµРЅР°.Р’РІРµРґРёС‚Рµ РґР°РЅРЅС‹Рµ!", vbOKOnly, "РќР°СЃС‚СЂРѕР№РєР° РєРѕРЅСЃС‚Р°РЅС‚")
 End If
 
 If fWrite = True Then
-    msgHit = MsgBox("Произведена запись в файл настройки!", vbOKOnly, "Настройка констант")
+    msgHit = MsgBox("РџСЂРѕРёР·РІРµРґРµРЅР° Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р» РЅР°СЃС‚СЂРѕР№РєРё!", vbOKOnly, "РќР°СЃС‚СЂРѕР№РєР° РєРѕРЅСЃС‚Р°РЅС‚")
 End If
 exit_
 
@@ -37,7 +37,7 @@ End Sub
 Public Sub input_()
 'Input
 fConst.TextBox1.Value = "\\altayoic\D\Zadachi\REJODU\"
-fConst.TextBox2.Value = "Режим_ЦДП"
+fConst.TextBox2.Value = "Р РµР¶РёРј_Р¦Р”Рџ"
 save_
 
 End Sub
@@ -64,10 +64,10 @@ If cPath = "" Then
     cPath = "\\altayoic\D\Zadachi\REJODU\"
 End If
 If cName = "" Then
-    cName = "Режим_ЦДП"
+    cName = "Р РµР¶РёРј_Р¦Р”Рџ"
 End If
 If cPass_s = "" Then
-   cPass_s = вампир
+   cPass_s = РІР°РјРїРёСЂ
 End If
 If cPass = "" Then
     cPass = Smax
