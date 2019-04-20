@@ -1,5 +1,5 @@
 Attribute VB_Name = "mText"
-'«‡ÔËÒ¸ ‚ ÚÂÍÒÚÓ‚˚È Ù‡ÈÎ ËÁ ÔÂÂÏÂÌÌÓÈ:
+'–ó–∞–ø–∏—Å—å –≤ —Ç–µ–∫—Å—Ç–æ–≤—ã–π —Ñ–∞–π–ª –∏–∑ –ø–µ—Ä–µ–º–µ–Ω–Ω–æ–π:
 Function SaveTXTfile(ByVal filename As String, ByVal txt As String) As Boolean
 On Error Resume Next
 If Err.Number = 0 Then
@@ -9,33 +9,33 @@ If Err.Number = 0 Then
     SaveTXTfile = Err = 0
     Set ts = Nothing: Set FSO = Nothing
 Else
-    msgR = MsgBox("«‡ÔËÒ¸ ÌÂ‚ÓÁÏÓÊÌ‡! ŒÚÒÛÚÒÚ‚Û˛Ú ÔÓÎÌÓÏÓ˜Ëˇ!", vbOKOnly, "Õ‡ÒÚÓÈÍ‡ ÍÓÌÒÚ‡ÌÚ")
+    msgR = MsgBox("–ó–∞–ø–∏—Å—å –Ω–µ–≤–æ–∑–º–æ–∂–Ω–∞! –û—Ç—Å—É—Ç—Å—Ç–≤—É—é—Ç –ø–æ–ª–Ω–æ–º–æ—á–∏—è!", vbOKOnly, "–ù–∞—Å—Ç—Ä–æ–π–∫–∞ –∫–æ–Ω—Å—Ç–∞–Ω—Ç")
 End If
 End Function
 Function LoadArrayFromTextFile(ByVal filename$, Optional ByVal FirstRow& = 1, _
                                Optional ByVal ColumnsSeparator$ = ";", Optional ByVal RowsSeparator$ = vbNewLine) As Variant
-   ' ‘ÛÌÍˆËˇ ÓÚÍ˚‚‡ÂÚ ÚÂÍÒÚÓ‚˚È Ù‡ÈÎ filename$,
-   ' Ë Á‡„ÛÊ‡ÂÚ Ï‡ÍÒÒË‚ ‰‡ÌÌ˚ı, Ì‡˜ËÌ‡ˇ ÒÓ ÒÚÓÍË FirstRow&
-   ' ¬ Í‡˜ÂÒÚ‚Â Ô‡‡ÏÂÚÓ‚ ÏÓÊÌÓ Á‡‰‡Ú¸  ‡Á‰ÂÎËÚÂÎË ÒÚÓÍ Ë ÒÚÓÎ·ˆÓ‚ ‰Îˇ ‡Á·Ë‚‡ÂÏÓÈ ÒÚÓÍË
-   ' ¬ÓÁ‚‡˘‡ÂÚ ‰‚ÛÏÂÌ˚È Ï‡ÒÒË‚ - ÂÁÛÎ¸Ú‡Ú ÔÂÓ·‡ÁÓ‚‡ÌËˇ ÚÂÍÒÚÓ‚Ó„Ó Ù‡ÈÎ‡ ‚ ‰‚ÛÏÂÌ˚È Ï‡ÒÒË‚
+   ' –§—É–Ω–∫—Ü–∏—è –æ—Ç–∫—Ä—ã–≤–∞–µ—Ç —Ç–µ–∫—Å—Ç–æ–≤—ã–π —Ñ–∞–π–ª filename$,
+   ' –∏ –∑–∞–≥—Ä—É–∂–∞–µ—Ç –º–∞–∫—Å—Å–∏–≤ –¥–∞–Ω–Ω—ã—Ö, –Ω–∞—á–∏–Ω–∞—è —Å–æ —Å—Ç—Ä–æ–∫–∏ FirstRow&
+   ' –í –∫–∞—á–µ—Å—Ç–≤–µ –ø–∞—Ä–∞–º–µ—Ç—Ä–æ–≤ –º–æ–∂–Ω–æ –∑–∞–¥–∞—Ç—å  —Ä–∞–∑–¥–µ–ª–∏—Ç–µ–ª–∏ —Å—Ç—Ä–æ–∫ –∏ —Å—Ç–æ–ª–±—Ü–æ–≤ –¥–ª—è —Ä–∞–∑–±–∏–≤–∞–µ–º–æ–π —Å—Ç—Ä–æ–∫–∏
+   ' –í–æ–∑–≤—Ä–∞—â–∞–µ—Ç –¥–≤—É–º–µ—Ä–Ω—ã–π –º–∞—Å—Å–∏–≤ - —Ä–µ–∑—É–ª—å—Ç–∞—Ç –ø—Ä–µ–æ–±—Ä–∞–∑–æ–≤–∞–Ω–∏—è —Ç–µ–∫—Å—Ç–æ–≤–æ–≥–æ —Ñ–∞–π–ª–∞ –≤ –¥–≤—É–º–µ—Ä–Ω—ã–π –º–∞—Å—Å–∏–≤
 
     On Error Resume Next
-    Set FSO = CreateObject("scripting.filesystemobject")        ' ˜ËÚ‡ÂÏ ÚÂÍÒÚ ËÁ ‚˚·‡ÌÌÓ„Ó Ù‡ÈÎ‡
+    Set FSO = CreateObject("scripting.filesystemobject")        ' —á–∏—Ç–∞–µ–º —Ç–µ–∫—Å—Ç –∏–∑ –≤—ã–±—Ä–∞–Ω–Ω–æ–≥–æ —Ñ–∞–π–ª–∞
     Set ts = FSO.OpenTextFile(filename$, 1, True): txt$ = ts.ReadAll: ts.Close
     Set ts = Nothing: Set FSO = Nothing
 
-    txt = Trim(txt): Err.Clear        ' ‡Á‰ÂÎˇÂÏ ÚÂÍÒÚ Ì‡ ÒÚÓÍË Ë ÒÚÓÎ·ˆ˚
+    txt = Trim(txt): Err.Clear        ' —Ä–∞–∑–¥–µ–ª—è–µ–º —Ç–µ–∫—Å—Ç –Ω–∞ —Å—Ç—Ä–æ–∫–∏ –∏ —Å—Ç–æ–ª–±—Ü—ã
     If txt Like "*" & RowsSeparator$ Then txt = Left(txt, Len(txt) - Len(RowsSeparator$))
 
-    If FirstRow& > 1 Then        ' Ó·ÂÁ‡ÂÏ ÌÂÌÛÊÌ˚Â ÒÚÓÍË
+    If FirstRow& > 1 Then        ' –æ–±—Ä–µ–∑–∞–µ–º –Ω–µ–Ω—É–∂–Ω—ã–µ —Å—Ç—Ä–æ–∫–∏
        txt = Split(txt, RowsSeparator$, FirstRow&)(FirstRow& - 1)
     End If
 
     Err.Clear: tmpArr1 = Split(txt, RowsSeparator$): RowsCount = UBound(tmpArr1) + 1
     ColumnsCount = UBound(Split(tmpArr1(0), ColumnsSeparator$)) + 1
     
-    If Err.Number > 0 Then MsgBox "“ÂÍÒÚ Ù‡ÈÎ‡ " & Dir(filename$, vbNormal) & _
-     " ÌÂ ÏÓÊÂÚ ·˚Ú¸ Ò˜ËÚ‡Ì ‚ ‰‚ÛÏÂÌ˚È Ï‡ÒÒË‚", vbCritical: Exit Function
+    If Err.Number > 0 Then MsgBox "–¢–µ–∫—Å—Ç —Ñ–∞–π–ª–∞ " & Dir(filename$, vbNormal) & _
+     " –Ω–µ –º–æ–∂–µ—Ç –±—ã—Ç—å —Å—á–∏—Ç–∞–Ω –≤ –¥–≤—É–º–µ—Ä–Ω—ã–π –º–∞—Å—Å–∏–≤", vbCritical: Exit Function
     ReDim arr(1 To RowsCount, 1 To ColumnsCount)
 
     For i = LBound(tmpArr1) To UBound(tmpArr1)
